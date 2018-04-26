@@ -1,0 +1,20 @@
+<?php
+/*!
+ * @file Config.php
+ * @author Sensu Development Team
+ * @date 2018/03/30
+ * @brief 設定
+ */
+
+class Config
+{
+    /*!
+     * @brief SensuプラットフォームAPIキー
+     */
+    const SENSU_PLATFORM_API_KEY = 'sensu_platform_api_key';
+
+    /*!
+     * @brief Telegram APIトークン
+     */
+    const TELEGRAM_API_TOKEN = 'telegram_api_token';
+}
