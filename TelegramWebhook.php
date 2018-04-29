@@ -75,7 +75,7 @@ class TelegramWebhook
         $command = $this::getCommandFromText($command);
 
         // 投げ銭コマンド
-        if (isset($command[0]) && $command[0] === 'tip')
+        if (isset($command[0]) && strcasecmp($command[0], 'tip') == 0)
         {
             if (isset($command[3]))
             {
@@ -110,7 +110,7 @@ class TelegramWebhook
         if (isset($result->push_message))
         {
             // 投げ銭コマンド
-            if (isset($command[0]) && $command[0] === 'tip')
+            if (isset($command[0]) && strcasecmp($command[0], 'tip') == 0)
             {
                 $send_message_push = new \unreal4u\TelegramAPI\Telegram\Methods\SendMessage();
                 $send_message_push->chat_id = intval($command[3]);
